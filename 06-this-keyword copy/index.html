@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>The this Keyword</title>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <main class="container">
+      <section class="card">
+        <span class="topic"> this Keyword </span>
+
+        <h1>Understanding this</h1>
+
+        <p class="description">
+          Inside an object method,
+          <code>this</code> refers to the object that is calling the method.
+        </p>
+
+        <div class="student-card">
+          <h2>Student Object</h2>
+
+          <p>
+            Name:
+            <strong id="nameResult"> - </strong>
+          </p>
+
+          <p>
+            Age:
+            <strong id="ageResult"> - </strong>
+          </p>
+
+          <button id="studentBtn">Show Student</button>
+        </div>
+
+        <div class="code-example">
+          <pre><code>const student = {
+
+    name: "Ahmad",
+    age: 23,
+
+    showInfo: function () {
+
+        console.log(this.name);
+        console.log(this.age);
+
+    }
+
+};
+
+student.showInfo();</code></pre>
+        </div>
+
+        <div class="remember">
+          <strong>Remember:</strong>
+
+          <p>In this example:</p>
+
+          <code>this.name</code>
+
+          <p>means:</p>
+
+          <code>student.name</code>
+        </div>
+      </section>
+    </main>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

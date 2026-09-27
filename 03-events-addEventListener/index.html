@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Events & addEventListener</title>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <main class="container">
+      <header class="page-header">
+        <span class="topic"> Topic 03 </span>
+
+        <h1>Events & addEventListener()</h1>
+
+        <p>
+          An event means that something happened. JavaScript can listen for that
+          event and run a function.
+        </p>
+      </header>
+
+      <!-- Event idea -->
+
+      <section class="event-flow">
+        <div>
+          <strong>Event</strong>
+          <span>Something happened</span>
+        </div>
+
+        <span class="arrow">→</span>
+
+        <div>
+          <strong>Listener</strong>
+          <span>Wait for the event</span>
+        </div>
+
+        <span class="arrow">→</span>
+
+        <div>
+          <strong>Function</strong>
+          <span>React to it</span>
+        </div>
+      </section>
+
+      <!-- Main demo -->
+
+      <section class="demo-section">
+        <h2>Demo Box</h2>
+
+        <div id="colorBox" class="color-box">Color Box</div>
+
+        <p id="status" class="status">Choose one of the examples below.</p>
+
+        <!-- Inline onclick -->
+
+        <div class="example">
+          <div class="example-info">
+            <h3>1. Inline onclick</h3>
+
+            <p>The function is called directly from the HTML element.</p>
+          </div>
+
+          <button onclick="inlineClick()">Run Inline onclick</button>
+
+          <pre><code>&lt;button onclick="inlineClick()"&gt;
+    Click Me
+&lt;/button&gt;</code></pre>
+        </div>
+
+        <!-- addEventListener -->
+
+        <div class="example">
+          <div class="example-info">
+            <h3>2. addEventListener()</h3>
+
+            <p>
+              JavaScript listens for the click event and then calls the
+              function.
+            </p>
+          </div>
+
+          <button id="listenerBtn">Run addEventListener</button>
+
+          <pre><code>listenerBtn.addEventListener(
+    "click",
+    changeColor
+);</code></pre>
+        </div>
+
+        <!-- Function reference vs function call -->
+
+        <div class="example">
+          <div class="example-info">
+            <h3>3. changeColor vs changeColor()</h3>
+          </div>
+
+          <div class="two-columns">
+            <div class="correct">
+              <h4>changeColor</h4>
+
+              <p>This is the function itself.</p>
+
+              <p>Give it to JavaScript so it can run later.</p>
+            </div>
+
+            <div class="wrong">
+              <h4>changeColor()</h4>
+
+              <p>This calls the function immediately.</p>
+            </div>
+          </div>
+
+          <pre><code>// Correct
+
+button.addEventListener(
+    "click",
+    changeColor
+);</code></pre>
+        </div>
+
+        <!-- Function with argument -->
+
+        <div class="example">
+          <div class="example-info">
+            <h3>4. Function With Parameter</h3>
+
+            <p>
+              If the function needs an argument, place the call inside another
+              function.
+            </p>
+          </div>
+
+          <button id="argumentBtn">Change to Tomato</button>
+
+          <pre><code>argumentBtn.addEventListener(
+    "click",
+    function () {
+
+        changeToColor("tomato");
+
+    }
+);</code></pre>
+        </div>
+
+        <!-- Multiple listeners -->
+
+        <div class="example">
+          <div class="example-info">
+            <h3>5. Multiple Listeners</h3>
+
+            <p>One event can have more than one listener.</p>
+          </div>
+
+          <button id="multipleBtn">Run Two Listeners</button>
+
+          <pre><code>multipleBtn.addEventListener(
+    "click",
+    changeBackground
+);
+
+multipleBtn.addEventListener(
+    "click",
+    moveBox
+);</code></pre>
+
+          <p class="hint">
+            Listener 1 changes the box color. Listener 2 moves the box.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

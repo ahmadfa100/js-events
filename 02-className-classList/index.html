@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>className and classList</title>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <main class="container">
+      <header class="page-header">
+        <span class="topic">Topic 02</span>
+
+        <h1>className & classList</h1>
+
+        <p>
+          Learn how JavaScript reads, replaces, adds, removes and toggles CSS
+          classes.
+        </p>
+      </header>
+
+      <section class="lesson-card">
+        <div id="box" class="demo-box in">My Box</div>
+
+        <div class="buttons">
+          <button id="classNameBtn">Change className</button>
+
+          <button id="addBtn">Add active</button>
+
+          <button id="removeBtn">Remove in</button>
+
+          <button id="toggleBtn">Toggle highlight</button>
+
+          <button id="containsBtn">Contains active?</button>
+
+          <button id="resetBtn" class="secondary">Reset</button>
+        </div>
+
+        <div class="result-card">
+          <div class="result-row">
+            <strong>className:</strong>
+            <span id="classNameValue"></span>
+          </div>
+
+          <div class="result-row">
+            <strong>classList.value:</strong>
+            <span id="classListValue"></span>
+          </div>
+
+          <div class="result-row">
+            <strong>Result:</strong>
+            <span id="resultValue"> Try the buttons. </span>
+          </div>
+        </div>
+      </section>
+
+      <section class="explanation">
+        <h2>Remember</h2>
+
+        <div class="compare-grid">
+          <div>
+            <h3>className</h3>
+
+            <pre><code>box.className = "demo-box active";</code></pre>
+
+            <p>Replaces the complete class attribute.</p>
+          </div>
+
+          <div>
+            <h3>classList</h3>
+
+            <pre><code>box.classList.add("active");
+
+box.classList.remove("active");
+
+box.classList.toggle("active");
+
+box.classList.contains("active");</code></pre>
+
+            <p>Works with individual classes.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

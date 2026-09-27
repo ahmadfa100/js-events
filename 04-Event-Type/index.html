@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>JavaScript Event Types</title>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <main class="container">
+      <header class="page-header">
+        <span class="topic"> Topic 04 </span>
+
+        <h1>JavaScript Event Types</h1>
+
+        <p>Window events, form events, keyboard events and mouse events.</p>
+      </header>
+
+      <!-- ============================= -->
+      <!-- EVENT IDEA -->
+      <!-- ============================= -->
+
+      <section class="intro-card">
+        <h2>What is an Event?</h2>
+
+        <p>An event means that something happened in the browser.</p>
+
+        <div class="event-flow">
+          <span>User does something</span>
+
+          <strong>→</strong>
+
+          <span>Event happens</span>
+
+          <strong>→</strong>
+
+          <span>JavaScript reacts</span>
+        </div>
+      </section>
+
+      <!-- ============================= -->
+      <!-- WINDOW EVENTS -->
+      <!-- ============================= -->
+
+      <section class="event-section">
+        <div class="section-title">
+          <span>01</span>
+
+          <div>
+            <h2>Window Events</h2>
+
+            <p>Events related to the browser window or the entire page.</p>
+          </div>
+        </div>
+
+        <div class="event-grid">
+          <article class="event-card">
+            <h3>load</h3>
+
+            <p>Happens when the page and its resources finish loading.</p>
+
+            <strong id="loadResult"> Waiting... </strong>
+          </article>
+
+          <article class="event-card">
+            <h3>resize</h3>
+
+            <p>Resize the browser window.</p>
+
+            <strong id="resizeResult"> Resize the window. </strong>
+          </article>
+
+          <article class="event-card">
+            <h3>scroll</h3>
+
+            <p>Scroll this page.</p>
+
+            <strong id="scrollResult"> Scroll position: 0 </strong>
+          </article>
+
+          <article class="event-card">
+            <h3>beforeunload</h3>
+
+            <p>Can warn the user before leaving a page with unsaved work.</p>
+
+            <label class="check-row">
+              <input type="checkbox" id="beforeUnloadCheckbox" />
+
+              Enable demo
+            </label>
+          </article>
+
+          <article class="event-card deprecated">
+            <h3>unload</h3>
+
+            <p>Deprecated. Do not use it for modern application logic.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- ============================= -->
+      <!-- FORM EVENTS -->
+      <!-- ============================= -->
+
+      <section class="event-section">
+        <div class="section-title">
+          <span>02</span>
+
+          <div>
+            <h2>Form Events</h2>
+
+            <p>Interact with the form and watch which events happen.</p>
+          </div>
+        </div>
+
+        <div class="form-layout">
+          <form id="demoForm" class="demo-form">
+            <div class="form-group">
+              <label for="nameInput"> Name </label>
+
+              <input
+                type="text"
+                id="nameInput"
+                placeholder="Type your name"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="countrySelect"> Country </label>
+
+              <select id="countrySelect">
+                <option value="">Select country</option>
+
+                <option value="Jordan">Jordan</option>
+
+                <option value="Saudi Arabia">Saudi Arabia</option>
+
+                <option value="UAE">UAE</option>
+              </select>
+            </div>
+
+            <div class="button-row">
+              <button type="submit">Submit</button>
+
+              <button type="reset" class="secondary">Reset</button>
+            </div>
+          </form>
+
+          <div class="event-results">
+            <p>
+              <strong>focus:</strong>
+              <span id="focusResult">Waiting</span>
+            </p>
+
+            <p>
+              <strong>blur:</strong>
+              <span id="blurResult">Waiting</span>
+            </p>
+
+            <p>
+              <strong>input:</strong>
+              <span id="inputResult">Waiting</span>
+            </p>
+
+            <p>
+              <strong>change:</strong>
+              <span id="changeResult">Waiting</span>
+            </p>
+
+            <p>
+              <strong>submit:</strong>
+              <span id="submitResult">Waiting</span>
+            </p>
+
+            <p>
+              <strong>reset:</strong>
+              <span id="resetResult">Waiting</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="important-note">
+          <strong>Important:</strong>
+
+          <code>input</code>
+          fires while the value changes.
+
+          <code>change</code>
+          happens when the change is committed.
+        </div>
+      </section>
+
+      <!-- ============================= -->
+      <!-- KEYBOARD EVENTS -->
+      <!-- ============================= -->
+
+      <section class="event-section">
+        <div class="section-title">
+          <span>03</span>
+
+          <div>
+            <h2>Keyboard Events</h2>
+
+            <p>Click the input and press keyboard keys.</p>
+          </div>
+        </div>
+
+        <div class="keyboard-demo">
+          <input
+            type="text"
+            id="keyboardInput"
+            placeholder="Press any key here..."
+          />
+
+          <div class="keyboard-results">
+            <p>
+              <strong>keydown:</strong>
+
+              <span id="keydownResult"> Waiting </span>
+            </p>
+
+            <p>
+              <strong>keyup:</strong>
+
+              <span id="keyupResult"> Waiting </span>
+            </p>
+
+            <p class="deprecated-text">
+              <strong>keypress:</strong>
+
+              Deprecated — use
+              <code>keydown</code>
+              or
+              <code>keyup</code>.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================= -->
+      <!-- MOUSE EVENTS -->
+      <!-- ============================= -->
+
+      <section class="event-section">
+        <div class="section-title">
+          <span>04</span>
+
+          <div>
+            <h2>Mouse Events</h2>
+
+            <p>Use the mouse inside the box below.</p>
+          </div>
+        </div>
+
+        <div id="mouseBox" class="mouse-box">
+          Mouse Area
+
+          <span id="mouseChild"> Child Element </span>
+        </div>
+
+        <div class="mouse-results">
+          <p>
+            <strong>click:</strong>
+            <span id="clickResult">Waiting</span>
+          </p>
+
+          <p>
+            <strong>dblclick:</strong>
+            <span id="dblclickResult">Waiting</span>
+          </p>
+
+          <p>
+            <strong>mousedown:</strong>
+            <span id="mousedownResult">Waiting</span>
+          </p>
+
+          <p>
+            <strong>mouseup:</strong>
+            <span id="mouseupResult">Waiting</span>
+          </p>
+
+          <p>
+            <strong>mouseenter:</strong>
+            <span id="mouseenterResult">Waiting</span>
+          </p>
+
+          <p>
+            <strong>mouseleave:</strong>
+            <span id="mouseleaveResult">Waiting</span>
+          </p>
+
+          <p>
+            <strong>mousemove:</strong>
+            <span id="mousemoveResult">Waiting</span>
+          </p>
+
+          <p>
+            <strong>mouseover:</strong>
+            <span id="mouseoverResult">Waiting</span>
+          </p>
+
+          <p>
+            <strong>mouseout:</strong>
+            <span id="mouseoutResult">Waiting</span>
+          </p>
+
+          <p>
+            <strong>contextmenu:</strong>
+            <span id="contextmenuResult">Waiting</span>
+          </p>
+        </div>
+
+        <div class="target-card">
+          <h3>target vs currentTarget</h3>
+
+          <p>
+            <strong>target:</strong>
+            <span id="targetResult">Waiting</span>
+          </p>
+
+          <p>
+            <strong>currentTarget:</strong>
+            <span id="currentTargetResult">Waiting</span>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

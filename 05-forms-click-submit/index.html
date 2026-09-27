@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    click vs submit
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="./style.css"
+  >
+
+</head>
+
+<body>
+
+  <main class="page">
+
+    <section class="card">
+
+      <span class="badge">
+        Topic 05
+      </span>
+
+      <h1>
+        click vs submit
+      </h1>
+
+      <p class="intro">
+        Submit the form using the button,
+        then try pressing Enter inside an input.
+      </p>
+
+
+      <form id="loginForm">
+
+        <div class="form-group">
+
+          <label for="email">
+            Email
+          </label>
+
+          <input
+            type="email"
+            id="email"
+            placeholder="name@example.com"
+            required
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="password">
+            Password
+          </label>
+
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            minlength="4"
+            required
+          >
+
+        </div>
+
+
+        <button
+          id="submitButton"
+          type="submit"
+        >
+          Submit Button
+        </button>
+
+
+        <button
+          id="normalButton"
+          type="button"
+          class="secondary"
+        >
+          Normal Button
+        </button>
+
+      </form>
+
+
+      <div
+        id="output"
+        class="output"
+      >
+        Event log...
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <script src="./main.js"></script>
+
+</body>
+</html>

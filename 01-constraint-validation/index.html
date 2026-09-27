@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Constraint Validation</title>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <main class="page">
+      <section class="card">
+        <div class="header">
+          <span class="badge"> Topic 01 </span>
+
+          <h1>Constraint Validation</h1>
+
+          <p>Practice HTML validation and input attributes.</p>
+        </div>
+
+        <form id="studentForm">
+          <!-- ========================= -->
+          <!-- VALUE + PLACEHOLDER -->
+          <!-- ========================= -->
+
+          <div class="form-group">
+            <label for="username"> Username </label>
+
+            <input
+              type="text"
+              id="username"
+              name="username"
+              value="Ahmad"
+              placeholder="Enter your username"
+              maxlength="12"
+              size="30"
+              required
+            />
+
+            <small>
+              value = initial value, placeholder = hint, maxlength = maximum
+              characters.
+            </small>
+          </div>
+
+          <!-- ========================= -->
+          <!-- MIN + MAX -->
+          <!-- ========================= -->
+
+          <div class="form-group">
+            <label for="age"> Age </label>
+
+            <input
+              type="number"
+              id="age"
+              name="age"
+              placeholder="18 - 60"
+              min="18"
+              max="60"
+              required
+            />
+
+            <small> Valid age: 18 to 60. </small>
+          </div>
+
+          <!-- ========================= -->
+          <!-- READONLY -->
+          <!-- ========================= -->
+
+          <div class="form-group">
+            <label for="country"> Country — readonly </label>
+
+            <input
+              type="text"
+              id="country"
+              name="country"
+              value="Jordan"
+              readonly
+            />
+
+            <small>
+              readonly → cannot edit, but value is still submitted.
+            </small>
+          </div>
+
+          <!-- ========================= -->
+          <!-- DISABLED -->
+          <!-- ========================= -->
+
+          <div class="form-group">
+            <label for="studentId"> Student ID — disabled </label>
+
+            <input
+              type="text"
+              id="studentId"
+              name="studentId"
+              value="ST-2026-001"
+              disabled
+            />
+
+            <small>
+              disabled → cannot interact, and value is NOT submitted.
+            </small>
+          </div>
+
+          <div class="buttons">
+            <button type="submit">Submit Form</button>
+
+            <button type="button" id="checkBtn" class="secondary">
+              checkValidity()
+            </button>
+
+            <button type="button" id="reportBtn" class="light">
+              reportValidity()
+            </button>
+          </div>
+        </form>
+
+        <div id="output" class="output">Results will appear here.</div>
+      </section>
+    </main>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
