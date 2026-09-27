@@ -110,74 +110,116 @@ keyboardInput.addEventListener("keyup", function (event) {
    MOUSE EVENTS
 ================================ */
 
-const mouseBox = document.getElementById("mouseBox");
+/* -------------------------------
+   1. Mouse Button Events
+-------------------------------- */
 
-const clickResult = document.getElementById("clickResult");
-
-const dblclickResult = document.getElementById("dblclickResult");
+const clickBox = document.getElementById("clickBox");
 
 const mousedownResult = document.getElementById("mousedownResult");
 
 const mouseupResult = document.getElementById("mouseupResult");
 
+const clickResult = document.getElementById("clickResult");
+
+const dblclickResult = document.getElementById("dblclickResult");
+
+clickBox.addEventListener("mousedown", function () {
+  mousedownResult.textContent = "Mouse button pressed";
+
+  clickBox.style.transform = "scale(0.97)";
+});
+
+clickBox.addEventListener("mouseup", function () {
+  mouseupResult.textContent = "Mouse button released";
+
+  clickBox.style.transform = "scale(1)";
+});
+
+clickBox.addEventListener("click", function () {
+  clickResult.textContent = "Click completed";
+
+  clickBox.style.backgroundColor = "#bceacb";
+});
+
+clickBox.addEventListener("dblclick", function () {
+  dblclickResult.textContent = "Double click detected";
+
+  clickBox.style.backgroundColor = "#ffe49a";
+});
+
+/* -------------------------------
+   2. Mouse Enter / Leave
+-------------------------------- */
+
+const enterBox = document.getElementById("enterBox");
+
 const mouseenterResult = document.getElementById("mouseenterResult");
 
 const mouseleaveResult = document.getElementById("mouseleaveResult");
 
+enterBox.addEventListener("mouseenter", function () {
+  mouseenterResult.textContent = "Mouse entered";
+
+  enterBox.style.backgroundColor = "#bceacb";
+});
+
+enterBox.addEventListener("mouseleave", function () {
+  mouseleaveResult.textContent = "Mouse left";
+
+  enterBox.style.backgroundColor = "#dff3e5";
+});
+
+/* -------------------------------
+   3. Mouse Move
+-------------------------------- */
+
+const moveBox = document.getElementById("moveBox");
+
+const mouseX = document.getElementById("mouseX");
+
+const mouseY = document.getElementById("mouseY");
+
 const mousemoveResult = document.getElementById("mousemoveResult");
+
+moveBox.addEventListener("mousemove", function (event) {
+  mouseX.textContent = event.offsetX;
+
+  mouseY.textContent = event.offsetY;
+
+  mousemoveResult.textContent = "Mouse is moving";
+});
+
+/* -------------------------------
+   4. Mouse Over / Out
+-------------------------------- */
+
+const overBox = document.getElementById("overBox");
 
 const mouseoverResult = document.getElementById("mouseoverResult");
 
 const mouseoutResult = document.getElementById("mouseoutResult");
 
-const contextmenuResult = document.getElementById("contextmenuResult");
-
-const targetResult = document.getElementById("targetResult");
-
-const currentTargetResult = document.getElementById("currentTargetResult");
-
-mouseBox.addEventListener("click", function (event) {
-  clickResult.textContent = "Mouse clicked.";
-
-  targetResult.textContent = event.target.id;
-
-  currentTargetResult.textContent = event.currentTarget.id;
-});
-
-mouseBox.addEventListener("dblclick", function () {
-  dblclickResult.textContent = "Double click detected.";
-});
-
-mouseBox.addEventListener("mousedown", function () {
-  mousedownResult.textContent = "Mouse button is down.";
-});
-
-mouseBox.addEventListener("mouseup", function () {
-  mouseupResult.textContent = "Mouse button released.";
-});
-
-mouseBox.addEventListener("mouseenter", function () {
-  mouseenterResult.textContent = "Mouse entered the box.";
-});
-
-mouseBox.addEventListener("mouseleave", function () {
-  mouseleaveResult.textContent = "Mouse left the box.";
-});
-
-mouseBox.addEventListener("mousemove", function (event) {
-  mousemoveResult.textContent = "X: " + event.offsetX + " Y: " + event.offsetY;
-});
-
-mouseBox.addEventListener("mouseover", function (event) {
+overBox.addEventListener("mouseover", function (event) {
   mouseoverResult.textContent = "Over: " + event.target.id;
 });
 
-mouseBox.addEventListener("mouseout", function (event) {
+overBox.addEventListener("mouseout", function (event) {
   mouseoutResult.textContent = "Out from: " + event.target.id;
 });
 
-mouseBox.addEventListener("contextmenu", function (event) {
+/* -------------------------------
+   5. Context Menu
+-------------------------------- */
+
+const contextBox = document.getElementById("contextBox");
+
+const contextmenuResult = document.getElementById("contextmenuResult");
+
+contextBox.addEventListener("contextmenu", function (event) {
   event.preventDefault();
 
-  contextmenuResult.textContent = "Right click detected.";
+  contextmenuResult.textContent = "Right click detected";
+
+  contextBox.style.backgroundColor = "#ffd8d8";
 });

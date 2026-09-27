@@ -12,6 +12,10 @@
 
   <body>
     <main class="container">
+      <!-- ============================= -->
+      <!-- PAGE HEADER -->
+      <!-- ============================= -->
+
       <header class="page-header">
         <span class="topic"> Topic 04 </span>
 
@@ -21,7 +25,7 @@
       </header>
 
       <!-- ============================= -->
-      <!-- EVENT IDEA -->
+      <!-- WHAT IS AN EVENT? -->
       <!-- ============================= -->
 
       <section class="intro-card">
@@ -30,25 +34,25 @@
         <p>An event means that something happened in the browser.</p>
 
         <div class="event-flow">
-          <span>User does something</span>
+          <span> User does something </span>
 
-          <strong>→</strong>
+          <strong> → </strong>
 
-          <span>Event happens</span>
+          <span> Event happens </span>
 
-          <strong>→</strong>
+          <strong> → </strong>
 
-          <span>JavaScript reacts</span>
+          <span> JavaScript reacts </span>
         </div>
       </section>
 
       <!-- ============================= -->
-      <!-- WINDOW EVENTS -->
+      <!-- 01 - WINDOW EVENTS -->
       <!-- ============================= -->
 
       <section class="event-section">
         <div class="section-title">
-          <span>01</span>
+          <span> 01 </span>
 
           <div>
             <h2>Window Events</h2>
@@ -58,6 +62,8 @@
         </div>
 
         <div class="event-grid">
+          <!-- load -->
+
           <article class="event-card">
             <h3>load</h3>
 
@@ -66,26 +72,32 @@
             <strong id="loadResult"> Waiting... </strong>
           </article>
 
+          <!-- resize -->
+
           <article class="event-card">
             <h3>resize</h3>
 
-            <p>Resize the browser window.</p>
+            <p>Happens when the browser window changes size.</p>
 
             <strong id="resizeResult"> Resize the window. </strong>
           </article>
 
+          <!-- scroll -->
+
           <article class="event-card">
             <h3>scroll</h3>
 
-            <p>Scroll this page.</p>
+            <p>Happens while the user scrolls the page.</p>
 
             <strong id="scrollResult"> Scroll position: 0 </strong>
           </article>
 
+          <!-- beforeunload -->
+
           <article class="event-card">
             <h3>beforeunload</h3>
 
-            <p>Can warn the user before leaving a page with unsaved work.</p>
+            <p>Can warn the user before leaving a page.</p>
 
             <label class="check-row">
               <input type="checkbox" id="beforeUnloadCheckbox" />
@@ -94,21 +106,23 @@
             </label>
           </article>
 
+          <!-- unload -->
+
           <article class="event-card deprecated">
             <h3>unload</h3>
 
-            <p>Deprecated. Do not use it for modern application logic.</p>
+            <p>Deprecated. Avoid using it for modern application logic.</p>
           </article>
         </div>
       </section>
 
       <!-- ============================= -->
-      <!-- FORM EVENTS -->
+      <!-- 02 - FORM EVENTS -->
       <!-- ============================= -->
 
       <section class="event-section">
         <div class="section-title">
-          <span>02</span>
+          <span> 02 </span>
 
           <div>
             <h2>Form Events</h2>
@@ -118,6 +132,8 @@
         </div>
 
         <div class="form-layout">
+          <!-- FORM -->
+
           <form id="demoForm" class="demo-form">
             <div class="form-group">
               <label for="nameInput"> Name </label>
@@ -151,57 +167,67 @@
             </div>
           </form>
 
+          <!-- RESULTS -->
+
           <div class="event-results">
             <p>
-              <strong>focus:</strong>
-              <span id="focusResult">Waiting</span>
+              <strong> focus: </strong>
+
+              <span id="focusResult"> Waiting </span>
             </p>
 
             <p>
-              <strong>blur:</strong>
-              <span id="blurResult">Waiting</span>
+              <strong> blur: </strong>
+
+              <span id="blurResult"> Waiting </span>
             </p>
 
             <p>
-              <strong>input:</strong>
-              <span id="inputResult">Waiting</span>
+              <strong> input: </strong>
+
+              <span id="inputResult"> Waiting </span>
             </p>
 
             <p>
-              <strong>change:</strong>
-              <span id="changeResult">Waiting</span>
+              <strong> change: </strong>
+
+              <span id="changeResult"> Waiting </span>
             </p>
 
             <p>
-              <strong>submit:</strong>
-              <span id="submitResult">Waiting</span>
+              <strong> submit: </strong>
+
+              <span id="submitResult"> Waiting </span>
             </p>
 
             <p>
-              <strong>reset:</strong>
-              <span id="resetResult">Waiting</span>
+              <strong> reset: </strong>
+
+              <span id="resetResult"> Waiting </span>
             </p>
           </div>
         </div>
 
         <div class="important-note">
-          <strong>Important:</strong>
+          <strong> Important: </strong>
 
-          <code>input</code>
+          <code> input </code>
+
           fires while the value changes.
 
-          <code>change</code>
+          <code> change </code>
+
           happens when the change is committed.
         </div>
       </section>
 
       <!-- ============================= -->
-      <!-- KEYBOARD EVENTS -->
+      <!-- 03 - KEYBOARD EVENTS -->
       <!-- ============================= -->
 
       <section class="event-section">
         <div class="section-title">
-          <span>03</span>
+          <span> 03 </span>
 
           <div>
             <h2>Keyboard Events</h2>
@@ -219,114 +245,238 @@
 
           <div class="keyboard-results">
             <p>
-              <strong>keydown:</strong>
+              <strong> keydown: </strong>
 
               <span id="keydownResult"> Waiting </span>
             </p>
 
             <p>
-              <strong>keyup:</strong>
+              <strong> keyup: </strong>
 
               <span id="keyupResult"> Waiting </span>
             </p>
 
             <p class="deprecated-text">
-              <strong>keypress:</strong>
+              <strong> keypress: </strong>
 
               Deprecated — use
-              <code>keydown</code>
+
+              <code> keydown </code>
+
               or
-              <code>keyup</code>.
+
+              <code> keyup </code>.
             </p>
           </div>
         </div>
       </section>
 
       <!-- ============================= -->
-      <!-- MOUSE EVENTS -->
+      <!-- 04 - MOUSE EVENTS -->
       <!-- ============================= -->
 
       <section class="event-section">
         <div class="section-title">
-          <span>04</span>
+          <span> 04 </span>
 
           <div>
             <h2>Mouse Events</h2>
 
-            <p>Use the mouse inside the box below.</p>
+            <p>
+              Interact with each box to understand the different mouse events.
+            </p>
           </div>
         </div>
 
-        <div id="mouseBox" class="mouse-box">
-          Mouse Area
+        <div class="mouse-demo-grid">
+          <!-- ============================= -->
+          <!-- MOUSE BUTTON EVENTS -->
+          <!-- ============================= -->
 
-          <span id="mouseChild"> Child Element </span>
-        </div>
+          <div class="mouse-demo-card">
+            <div class="mouse-demo-header">
+              <h3>Mouse Button Events</h3>
 
-        <div class="mouse-results">
-          <p>
-            <strong>click:</strong>
-            <span id="clickResult">Waiting</span>
-          </p>
+              <p>Press, release, click, or double-click the box.</p>
+            </div>
 
-          <p>
-            <strong>dblclick:</strong>
-            <span id="dblclickResult">Waiting</span>
-          </p>
+            <div id="clickBox" class="mouse-demo-box">Click Here</div>
 
-          <p>
-            <strong>mousedown:</strong>
-            <span id="mousedownResult">Waiting</span>
-          </p>
+            <div class="mouse-event-list">
+              <p>
+                <code> mousedown </code>
 
-          <p>
-            <strong>mouseup:</strong>
-            <span id="mouseupResult">Waiting</span>
-          </p>
+                <span id="mousedownResult"> Waiting... </span>
+              </p>
 
-          <p>
-            <strong>mouseenter:</strong>
-            <span id="mouseenterResult">Waiting</span>
-          </p>
+              <p>
+                <code> mouseup </code>
 
-          <p>
-            <strong>mouseleave:</strong>
-            <span id="mouseleaveResult">Waiting</span>
-          </p>
+                <span id="mouseupResult"> Waiting... </span>
+              </p>
 
-          <p>
-            <strong>mousemove:</strong>
-            <span id="mousemoveResult">Waiting</span>
-          </p>
+              <p>
+                <code> click </code>
 
-          <p>
-            <strong>mouseover:</strong>
-            <span id="mouseoverResult">Waiting</span>
-          </p>
+                <span id="clickResult"> Waiting... </span>
+              </p>
 
-          <p>
-            <strong>mouseout:</strong>
-            <span id="mouseoutResult">Waiting</span>
-          </p>
+              <p>
+                <code> dblclick </code>
 
-          <p>
-            <strong>contextmenu:</strong>
-            <span id="contextmenuResult">Waiting</span>
-          </p>
-        </div>
+                <span id="dblclickResult"> Waiting... </span>
+              </p>
+            </div>
 
-        <div class="target-card">
-          <h3>target vs currentTarget</h3>
+            <div class="mouse-note">
+              <strong> Normal click sequence: </strong>
 
-          <p>
-            <strong>target:</strong>
-            <span id="targetResult">Waiting</span>
-          </p>
+              <span> mousedown → mouseup → click </span>
+            </div>
+          </div>
 
-          <p>
-            <strong>currentTarget:</strong>
-            <span id="currentTargetResult">Waiting</span>
-          </p>
+          <!-- ============================= -->
+          <!-- MOUSE ENTER / LEAVE -->
+          <!-- ============================= -->
+
+          <div class="mouse-demo-card">
+            <div class="mouse-demo-header">
+              <h3>Enter & Leave</h3>
+
+              <p>Move the mouse into the box, then move it outside.</p>
+            </div>
+
+            <div id="enterBox" class="mouse-demo-box">Enter This Box</div>
+
+            <div class="mouse-event-list">
+              <p>
+                <code> mouseenter </code>
+
+                <span id="mouseenterResult"> Waiting... </span>
+              </p>
+
+              <p>
+                <code> mouseleave </code>
+
+                <span id="mouseleaveResult"> Waiting... </span>
+              </p>
+            </div>
+
+            <div class="mouse-note">
+              <strong> Think: </strong>
+
+              <span> Enter the box → mouseenter </span>
+
+              <span> Leave the box → mouseleave </span>
+            </div>
+          </div>
+
+          <!-- ============================= -->
+          <!-- MOUSE MOVE -->
+          <!-- ============================= -->
+
+          <div class="mouse-demo-card">
+            <div class="mouse-demo-header">
+              <h3>Mouse Movement</h3>
+
+              <p>Move the cursor inside the box to see its position.</p>
+            </div>
+
+            <div id="moveBox" class="mouse-demo-box move-box">
+              <span> Move Your Mouse </span>
+
+              <div class="coordinates">
+                X:
+
+                <strong id="mouseX"> 0 </strong>
+
+                Y:
+
+                <strong id="mouseY"> 0 </strong>
+              </div>
+            </div>
+
+            <div class="mouse-event-list">
+              <p>
+                <code> mousemove </code>
+
+                <span id="mousemoveResult"> Waiting for movement... </span>
+              </p>
+            </div>
+
+            <div class="mouse-note">
+              <span>
+                mousemove can run many times while the cursor is moving.
+              </span>
+            </div>
+          </div>
+
+          <!-- ============================= -->
+          <!-- MOUSEOVER / MOUSEOUT -->
+          <!-- ============================= -->
+
+          <div class="mouse-demo-card">
+            <div class="mouse-demo-header">
+              <h3>Mouse Over & Out</h3>
+
+              <p>Move between the parent and its child element.</p>
+            </div>
+
+            <div id="overBox" class="over-box">
+              Parent
+
+              <div id="childBox" class="child-box">Child</div>
+            </div>
+
+            <div class="mouse-event-list">
+              <p>
+                <code> mouseover </code>
+
+                <span id="mouseoverResult"> Waiting... </span>
+              </p>
+
+              <p>
+                <code> mouseout </code>
+
+                <span id="mouseoutResult"> Waiting... </span>
+              </p>
+            </div>
+
+            <div class="mouse-note">
+              <span>
+                mouseover and mouseout can react while moving between the parent
+                and child elements.
+              </span>
+            </div>
+          </div>
+
+          <!-- ============================= -->
+          <!-- CONTEXT MENU -->
+          <!-- ============================= -->
+
+          <div class="mouse-demo-card context-card">
+            <div class="mouse-demo-header">
+              <h3>Right Click</h3>
+
+              <p>Right-click inside the box.</p>
+            </div>
+
+            <div id="contextBox" class="mouse-demo-box">Right Click Here</div>
+
+            <div class="mouse-event-list">
+              <p>
+                <code> contextmenu </code>
+
+                <span id="contextmenuResult"> Waiting... </span>
+              </p>
+            </div>
+
+            <div class="mouse-note">
+              <span>
+                contextmenu usually happens when the user right-clicks.
+              </span>
+            </div>
+          </div>
         </div>
       </section>
     </main>
